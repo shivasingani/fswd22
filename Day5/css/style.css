@@ -1,0 +1,81 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    background-color: aquamarine;
+    width:100%;
+    height:100%;
+    display:block;
+    overflow: auto;
+}
+header{
+    height:20%;
+    font-size: larger;
+    text-align: center;           
+}
+.logo{
+    text-align: center;
+    width:100px;
+    height:100px;
+}
+.card{
+    float:left;
+    width: 30%;
+    border: 2px solid red;
+    border-radius: 10px;
+    text-align: center;
+    display:block;
+    margin: 5px;
+    background-color:rgb(244, 106, 106);
+    
+
+}
+article{
+    clear:both;
+    width:90%;
+    display:block;
+    border: 2px solid red;
+    border-radius: 10px;  
+    text-align: center; 
+    margin-left:1%;
+    background-color: bisque;                    
+}
+
+footer{
+    clear:both;
+    text-align: center;
+    
+}
+article > section > div{
+    display:block;
+    padding:5%;
+}
+form{
+    text-align:start;
+}
+input{
+    margin-bottom:2%;
+}
+textarea{
+    margin-bottom:2%;
+}
+label{
+   margin-bottom:2%;
+}
+a{
+    text-decoration: none;
+    color:rgb(29, 100, 83)
+}
+a:hover{
+    background-color: rgb(95, 220, 239);
+}
+.profilepic{
+    width:150px;
+    height:150px;
+
+}
+.aboutme{
+    text-align: start;
+    padding:20px;
+}
