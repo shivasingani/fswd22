@@ -1,4 +1,30 @@
-function getWeather(){
+
+function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } 
+  }
+  
+  function showPosition(position) {
+    let url = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=metric&appid=93f26e3c57081a6210de53b8dcfdfea4`;
+
+    getWeather(url);
+  }
+
+  function getURL(){
+    let txtLocation = document.getElementById("txtLoc").value;
+    let units;
+
+        if(document.getElementById("metric").checked){
+            units = "metric";
+        }else{
+            units = "imperial";
+        }
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${txtLocation}&units=${units}&appid=93f26e3c57081a6210de53b8dcfdfea4`;
+        return url;
+  }
+
+function getWeather(url){
 // create a request object
 
 let req = new XMLHttpRequest();
@@ -14,8 +40,14 @@ if(document.getElementById("metric").checked){
 }else{
     units = "imperial";
 }
+/*let url;
+if(lat!="undefined" && long!="undefined"){
+    url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=${units}&appid=93f26e3c57081a6210de53b8dcfdfea4`;
+}else{
+    url = `https://api.openweathermap.org/data/2.5/weather?q=${txtLocation}&units=${units}&appid=93f26e3c57081a6210de53b8dcfdfea4`;
+}*/
 
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${txtLocation}&units=${units}&appid=93f26e3c57081a6210de53b8dcfdfea4`;
+//let url = `https://api.openweathermap.org/data/2.5/weather?q=${txtLocation}&units=${units}&appid=93f26e3c57081a6210de53b8dcfdfea4`;
 
 let measures = {
     metric:{temp:"°C",speed:"m/s",dist:"km"},
@@ -34,6 +66,9 @@ req.onload = function(){
         console.log(data.main.temp);
         
         document.getElementById("city").textContent = `${data.name}, ${data.sys.country}`;
+        if(document.getElementById("txtLoc").value == "undefined" || document.getElementById("txtLoc").value==""){
+            document.getElementById("txtLoc").value = `${data.name}, ${data.sys.country}`;
+        }
         let dtime = new Date(data.dt*1000);
         document.getElementById("dtime").textContent = dtime;
         document.getElementById("wdesc").textContent = ` ${data.weather[0].main} : ${data.weather[0].description}`;
@@ -44,7 +79,7 @@ req.onload = function(){
         document.getElementById("windspeed").textContent = "Wind Speed : "+data.wind.speed+measures[units].speed;
         document.getElementById("pressure").textContent = "Pressure : "+data.main.pressure+"hPa";
         document.getElementById("humidity").textContent = "Humidity : "+data.main.humidity+"%";
-        document.getElementById("visibility").textContent = "Visibility : "+data.visibility+measures[units].dist;
+        document.getElementById("visibility").textContent = "Visibility : "+(Number(data.visibility)/1000)+measures[units].dist;
 
     }
 }
