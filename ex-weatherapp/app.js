@@ -6,7 +6,21 @@ let req = new XMLHttpRequest();
 // set the request type and URL
 
 let txtLocation = document.getElementById("txtLoc").value;
-let url = `https://api.openweathermap.org/data/2.5/weather?q=${txtLocation}&units=metric&appid=93f26e3c57081a6210de53b8dcfdfea4`;
+
+let units;
+
+if(document.getElementById("metric").checked){
+    units = "metric";
+}else{
+    units = "imperial";
+}
+
+let url = `https://api.openweathermap.org/data/2.5/weather?q=${txtLocation}&units=${units}&appid=93f26e3c57081a6210de53b8dcfdfea4`;
+
+let measures = {
+    metric:{temp:"°C",speed:"m/s",dist:"km"},
+    imperial:{temp:"°F",speed:"mph",dist:"km"}
+};
 
 req.open('GET', url, true);
 
@@ -23,14 +37,14 @@ req.onload = function(){
         let dtime = new Date(data.dt*1000);
         document.getElementById("dtime").textContent = dtime;
         document.getElementById("wdesc").textContent = ` ${data.weather[0].main} : ${data.weather[0].description}`;
-        
-        document.getElementById("temp").textContent = data.main.temp + "°C";
+        let mtemp = measures[units].temp;
+        document.getElementById("temp").textContent = data.main.temp + measures[units].temp;
         document.getElementById("wimg").src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-        document.getElementById("feels").textContent = ` Feels like ${data.main.feels_like}. ${data.weather[0].description}`
-        document.getElementById("windspeed").textContent = "Wind Speed : "+data.wind.speed;
-        document.getElementById("pressure").textContent = "Pressure : "+data.main.pressure;
-        document.getElementById("humidity").textContent = "Humidity : "+data.main.humidity;
-        document.getElementById("visibility").textContent = "Visibility : "+data.visibility;
+        document.getElementById("feels").textContent = ` Feels like ${data.main.feels_like}${mtemp}. ${data.weather[0].description}`
+        document.getElementById("windspeed").textContent = "Wind Speed : "+data.wind.speed+measures[units].speed;
+        document.getElementById("pressure").textContent = "Pressure : "+data.main.pressure+"hPa";
+        document.getElementById("humidity").textContent = "Humidity : "+data.main.humidity+"%";
+        document.getElementById("visibility").textContent = "Visibility : "+data.visibility+measures[units].dist;
 
     }
 }

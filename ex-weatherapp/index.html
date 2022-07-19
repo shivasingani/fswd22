@@ -24,6 +24,17 @@
                     <button type="button" class="btn button-round btn-primary btn-sm" onclick="getWeather();"> Search</button>
                 </div>
             </div>
+            <div class="col">
+                        
+            <div class="input-group mb-3 mt-3">
+                <input type="radio" class="btn-check" onclick="getWeather();" name="options-outlined" id="metric" autocomplete="off" checked>
+                <label class="btn btn-outline-success" for="metric">Metric: °C, m/s</label>
+
+                <input type="radio" class="btn-check" onclick="getWeather();" name="options-outlined" id="imperial" autocomplete="off">
+                <label class="btn btn-outline-danger" for="imperial">Imperial: °F, mph</label>
+            </div>
+
+            </div>
         </div>    
 
         <div class="row bg-white mb-4" >
