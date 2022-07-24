@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Exercise</title>
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .navimg{
+            width:25px;
+            height:25px;
+        }
+       
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <div class="container">
+            <a href="#" class="navbar-brand"> <span> <img  src="../img/logo.png"/> </span> </a>
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#mynavitems"> 
+                <span class="navbar-toggler-icon"></span>
+            </button>
+       
+            <div id="mynavitems" class="collapse navbar-collapse">
+                <ui class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> 
+                        <a href="#" class="nav-link" data-bs-toggle="collapse">
+                        </a></li>
+                    <li class="nav-item"> 
+                        <a href="index.html" class="nav-link">
+                        <span class="mx-2"><img class="navimg rounded-circle" src="../img/home.png"/></span>Home</a></li>
+                    <li class="nav-item"> 
+                        <a href="aboutus.html" class="nav-link" >
+                            <span class="mx-2"><img class="navimg rounded-circle" src="../img/aboutus.png"/></span>About Us</a></li>
+                    <li class="nav-item"> <a href="products.html" class="nav-link">
+                        <span class="mx-2"><img class="navimg rounded-circle" src="../img/products.png"/></span>Products</a></li>
+                   <li class="nav-item"> <a href="contactus.html" class="nav-link">
+                        <span class="mx-2"><img class="navimg rounded-circle" src="../img/contact.png"/></span>Contact Us</a></li>
+                    <li class="nav-item"> <a href="faq.html" class="nav-link">
+                            <span class="mx-2"><img class="navimg rounded-circle" src="../img/aboutus.png"/></span>FAQ</a></li>
+                        </ui>
+                    </div> 
+        
+                    <div class="float-right">
+                        <button type="button" class="btn btn-primary d-table my-5 mx-auto" data-bs-toggle="modal" data-bs-target="#modalLoginForm">
+                            <span class="mx-2"><img class="navimg rounded-circle" src="../img/login.png"/>Login</span>
+                        </button>
+                    </div>
+                   
+                </div>
+        
+            </nav>
+        
+            <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <form action="" class="was-validated">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                  </svg>
+                  <input type="email" id="defaultForm-email" class="form-control text-validate" required>
+                  <label for="defaultForm-email">Your email</label>
+                  
+                </div>
+        
+                <div class="md-form mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                      </svg>
+                  <input type="password" id="defaultForm-pass" class="form-control validate" required>
+                  <label for="defaultForm-pass">Your password</label>
+                  
+                </div>
+        
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button type="submit" class="btn btn-default" >Login</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        
+
+    <div class="container-fuild bg-warning" >
+        <div id="about">
+            <div class="row">
+                <h1>Welcome to BuyBest</h1>
+            </div>
+            <div class="row">
+           
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="3" aria-label="Fourth slide"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 h-25" src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80" alt="Laptops">
+                        <div class="carousel-caption">                            
+                          </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1529336953128-a85760f58cb5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Desktops">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1516163109866-e9d98630a0a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80" alt="Mobiles & Accessories">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100" src="https://images.unsplash.com/photo-1597049176495-60ca7846c7ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80" alt="Gaming">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+            
+        </div>
+    </div>
+    
+
+</body>
+</html>
