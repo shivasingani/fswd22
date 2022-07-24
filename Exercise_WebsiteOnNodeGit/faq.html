@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Exercise</title>
+
+     <!-- Bootstrap CSS -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <!-- Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        .navimg{
+            width:25px;
+            height:25px;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary">
+        <div class="container">
+            <a href="index.html" class="navbar-brand"> <span> <img  src="../img/logo.png"/> </span> </a>
+            <button class="navbar-toggler" type="button" 
+            data-bs-toggle="collapse" data-bs-target="#mynavitems"> 
+                <span class="navbar-toggler-icon"></span>
+            </button>
+       
+            <div id="mynavitems" class="collapse navbar-collapse">
+                <ui class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"> 
+                    <a href="#" class="nav-link" data-bs-toggle="collapse">
+                    </a></li>
+                <li class="nav-item"> 
+                    <a href="index.html" class="nav-link">
+                    <span class="mx-2"><img class="navimg rounded-circle" src="../img/home.png"/></span>Home</a></li>
+                    <li class="nav-item"> 
+                        <a href="aboutus.html" class="nav-link" >
+                            <span class="mx-2"><img class="navimg rounded-circle" src="../img/aboutus.png"/></span>About Us</a></li>
+                    <li class="nav-item"> <a href="products.html" class="nav-link">
+                        <span class="mx-2"><img class="navimg rounded-circle" src="../img/products.png"/></span>Products</a></li>
+                   <li class="nav-item"> <a href="contactus.html" class="nav-link">
+                        <span class="mx-2"><img class="navimg rounded-circle" src="../img/contact.png"/></span>Contact Us</a></li>
+                    <li class="nav-item"> <a href="#" class="nav-link active">
+                            <span class="mx-2"><img class="navimg rounded-circle" src="../img/aboutus.png"/></span>FAQ</a></li>
+                        </ui>
+                    </div> 
+        
+                    <div class="float-right">
+                        <button type="button" class="btn btn-primary d-table my-5 mx-auto" data-bs-toggle="modal" data-bs-target="#modalLoginForm">
+                            <span class="mx-2"><img class="navimg rounded-circle" src="../img/login.png"/>Login</span>
+                        </button>
+                    </div>
+                   
+                </div>
+        
+            </nav>
+        
+            <div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <form action="" class="was-validated">
+              <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+                <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body mx-3">
+                <div class="md-form mb-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                  </svg>
+                  <input type="email" id="defaultForm-email" class="form-control text-validate" required>
+                  <label for="defaultForm-email">Your email</label>
+                  
+                </div>
+        
+                <div class="md-form mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                        <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/>
+                      </svg>
+                  <input type="password" id="defaultForm-pass" class="form-control validate" required>
+                  <label for="defaultForm-pass">Your password</label>
+                  
+                </div>
+        
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <button type="submit" class="btn btn-default" >Login</button>
+              </div>
+            </form>
+            </div>
+          </div>
+        </div>
+        
+
+    <div class="container-fuild bg-warning" >
+        <div class="row">
+            <div class="col my-2 mx-4 mt-4">
+                <h3> Frequently Asked Questions: </h3>
+                 
+                <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        I have returned my product but did not get the refund yet?
+                      </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        Please allow us 7 business days after we recieve the returned product to issue the refunnd.
+                        if it is morethan 7days and you did not receive the refund, please check with the bank. Then you can reach out to us via contact us or by calling us.
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                            I have purchased product on your website. Now I have some issues. How do I get the warranty?
+                          </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            BestBuy is place for sellers to sell the products and buyers to buy the same with a competitive price. BestBuy will not provide any warrany but some of the sellers does.
+                            Please review the return and warranty policies while buying the product.
+                          </div>
+                        </div>
+
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseOne">
+                            How do I know where is my package is?
+                      </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                      <div class="accordion-body">
+                        BuyBest sends frequent updates on the delivery status of the products purchased. Please check spam/junk folder if the mails are sent to.
+                        otherwise you can use the contact us form with the details of the purchase order or by calling our toll free number you can track where the product is.
+                      </div>
+                    </div>
+                  
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+</html>
